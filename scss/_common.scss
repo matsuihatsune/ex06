@@ -1,0 +1,46 @@
+//テーマカラーの定義
+$base-black:#4c4e54;
+$base-blue:#00A5DE;
+$base-gray:#666666;
+$border-gray:#f0f0f0;
+
+//body style
+body{
+    width: 1080px;//横幅の固定
+    margin: 0 auto;//body要素の中央揃え
+}
+
+h2{
+    color: $base-black;
+    font-size: 16px;
+}
+
+p{
+    color: $base-gray;
+    font-size: 14px;
+}
+
+a{
+    color: $base-blue;
+    text-decoration: none;
+    &:hover{
+        color: darken($base-blue,20%);//追加
+    }
+}
+
+@mixin article($article-border-top-color,$article-border-bottom-color,$article-width){
+    box-sizing: border-box;//paddingとborderをwidthとheightに含める
+        width: 48%;//右マージンを考慮して、50%にはしていない
+        float: left;//記事を横並びに配置する
+        margin-right: 100% - 2 *48%;//隣のarticleとのマージン。48%はaritlceのwidth
+        margin-bottom: 20px;
+        &nth-child(even){
+            margin-right: 0;//偶数番目（２列目）の右マージンは不要
+}
+    h1{
+         border-top: 3px solid $border-top-color;
+            border-bottom: 1px solid $border-bottom-color;
+            font-size: 21px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+    }

@@ -1,0 +1,33 @@
+//テーマカラーの定義
+$base-black:#4c4e54;
+$base-blue:#00A5DE;
+$base-gray:#666666;
+$border-gray:#f0f0f0;
+
+main{
+    float:left;
+    width: 66.666%;//全体の横幅の2/3の値
+    box-sizing: border-box;//paddingとborderをheightに含める
+    overflow: hidden;//float対策
+    padding: 10px;
+    
+    article{//表示する記事のスタイル
+        @include article-box(1,0,$base-blue, $border-gray, 48%);
+        @include article-box(3,2%,$base-blue, $border-gray, 48%);
+        box-sizing: border-box;//paddingとborderをwidthとheightに含める
+        width: 48%;//右マージンを考慮して、50%にはしていない
+        float: left;//記事を横並びに配置する
+        margin-right: 100% - 2 *48%;//隣のarticleとのマージン。48%はaritlceのwidth
+        margin-bottom: 20px;
+        &nth-child(even){
+            margin-right: 0;//偶数番目（２列目）の右マージンは不要
+        }
+        h1{//記事の大見出し
+            border-top: 3px solid $border-top-color;
+            border-bottom: 1px solid $border-bottom-color;
+            font-size: 21px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}

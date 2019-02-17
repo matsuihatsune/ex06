@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "all.css",
+  "sources": [
+    "all.scss",
+    "_common.scss",
+    "_header.scss",
+    "_main.scss",
+    "_aside.scss",
+    "_footer.scss"
+  ],
+  "mappings": "",
+  "names": []
+}

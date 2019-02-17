@@ -1,0 +1,25 @@
+//テーマカラーの定義
+$base-black:#4c4e54;
+$base-blue:#00A5DE;
+$base-gray:#666666;
+$border-gray:#f0f0f0;
+
+aside{
+    width: 33.333%;
+    box-sizing: border-box;
+    float: left;
+    h2{
+        color: $base-black;
+        padding-left: 40px;
+        margin-top: 42px;
+    }
+    ul li{
+        font-size: 14px;
+        list-style: none;
+        line-height: 2.8em;
+        border-bottom: 1px solid $border-gray;
+        &:first-child{
+            border-top: 1px solid $border-gray;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+//テーマカラーの定義
+$base-black:#4c4e54;
+$base-blue:#00A5DE;
+$base-gray:#666666;
+$border-gray:#f0f0f0;
+
+footer{
+    clear: both;
+    border-top: 1px solid $border-gray;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    small{
+        color: $base-gray;
+        font-size: 12px;
+    }
+}

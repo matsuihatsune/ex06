@@ -1,0 +1,38 @@
+//テーマカラーの定義
+$base-black:#4c4e54;
+$base-blue:#00A5DE;
+$base-gray:#666666;
+$border-gray:#f0f0f0;
+
+header{
+    overflow:hidden;//.header-titleとnavのfloat解除
+    border-bottom: 1px solid $border-gray;
+    
+    .header-title{
+        float: left;//左揃え
+        
+        h1{
+            font-size: 24px;
+            color: $base-blue;
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+        p{
+            margin: 0;
+            font-size: 12px;
+            line-height: 1.4em;//行間の調整　1emは現在のフォントサイズ
+        }
+    }
+    nav{
+        float:  right;//右揃え
+        ul{
+            overflow: hidden;//liのfloatの解除
+        li{
+            list-style: none;
+            float: left;//横並びにする
+            padding-top: 25px;
+            margin-right: 14px;
+            }
+        }
+    }
+}
